@@ -210,7 +210,7 @@ const Vimeo = ({ text, className, href }) =>
 
 const Title = () => (
   <Wrapper>
-    <Heading heading="Welcome to Women Coders" subheading="Coming Soon" content=""/>
+    <Heading heading="Welcome to Women Coders" subheading="Coming Soon!!!" content="Launching in December 2018"/>
     <Email href="mailto:contactus@women-coders.org" className="icon-mail2" />
   </Wrapper>
 );

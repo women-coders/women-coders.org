@@ -31,7 +31,7 @@ const Button = styled.button`
 `
 
 const Wrapper = styled.div`
-  background: #4e4e4e;
+  background: #4f5484;
   height: 100vh;
 `
 
