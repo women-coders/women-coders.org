@@ -1,8 +1,7 @@
 {
-  "name": "ReactAnimations",
+  "name": "WomenCoders",
   "version": "0.0.1",
   "private": true,
-  "homepage": "https://mannaio.github.io/React-Coming-Soon",
   "devDependencies": {
     "gh-pages": "^1.0.0",
     "react-scripts": "0.9.5"
