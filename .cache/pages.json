@@ -1,0 +1,67 @@
+[
+    {
+        "componentChunkName": "component---src-pages-index-js",
+        "jsonName": "index",
+        "path": "/"
+    },
+    {
+        "componentChunkName": "component---src-pages-404-js",
+        "jsonName": "404-html-516",
+        "path": "/404.html"
+    },
+    {
+        "componentChunkName": "component---src-pages-404-js",
+        "jsonName": "404-22d",
+        "path": "/404/"
+    },
+    {
+        "componentChunkName": "component---src-templates-page-template-js",
+        "jsonName": "about-f34",
+        "path": "/about/"
+    },
+    {
+        "componentChunkName": "component---src-templates-category-template-js",
+        "jsonName": "category-sayings-2fb",
+        "path": "/category/sayings/"
+    },
+    {
+        "componentChunkName": "component---src-templates-category-template-js",
+        "jsonName": "category-testimonies-f17",
+        "path": "/category/testimonies/"
+    },
+    {
+        "componentChunkName": "component---src-templates-page-template-js",
+        "jsonName": "chapters-aff",
+        "path": "/chapters/"
+    },
+    {
+        "componentChunkName": "component---cache-dev-404-page-js",
+        "jsonName": "dev-404-page-5f9",
+        "path": "/dev-404-page/"
+    },
+    {
+        "componentChunkName": "component---src-templates-post-template-js",
+        "jsonName": "draft-post-a23",
+        "path": "/draft-post/"
+    },
+    {
+        "componentChunkName": "component---src-templates-page-template-js",
+        "jsonName": "join-us-1d4",
+        "path": "/join-us/"
+    },
+    {
+        "componentChunkName": "component---src-templates-page-template-js",
+        "jsonName": "motivation-4bc",
+        "path": "/motivation/"
+    },
+    {
+        "componentChunkName": "component---src-pages-search-js",
+        "jsonName": "search-a73",
+        "path": "/search/"
+    },
+    {
+        "componentChunkName": "component---src-templates-post-template-js",
+        "jsonName": "womens-day-special-f63",
+        "path": "/womens-day-special/"
+    }
+]
