@@ -2,7 +2,6 @@ import PropTypes from "prop-types";
 import React from "react";
 import { graphql } from "gatsby";
 import { ThemeContext } from "../layouts";
-import Blog from "../components/Blog";
 import Hero from "../components/Hero";
 import Seo from "../components/Seo";
 
@@ -16,7 +15,6 @@ class IndexPage extends React.Component {
   render() {
     const {
       data: {
-        posts: { edges: posts = [] },
         bgDesktop: {
           resize: { src: desktop }
         },
@@ -47,10 +45,6 @@ class IndexPage extends React.Component {
         </ThemeContext.Consumer>
 
         <hr ref={this.separator} />
-
-        <ThemeContext.Consumer>
-          {theme => <Blog posts={posts} theme={theme} />}
-        </ThemeContext.Consumer>
 
         <Seo facebook={facebook} />
 

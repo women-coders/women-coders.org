@@ -2,5 +2,4 @@
 title: footnote
 ---
 
-* photos by [unsplash.com](https://unsplash.com)
-* graphic by [pixabay.com](https://pixabay.com)
+* Join us on [meetup.com](https://www.meetup.com/mumbai-women-coders/)

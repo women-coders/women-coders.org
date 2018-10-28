@@ -1,23 +1,23 @@
 module.exports = {
-  siteTitle: "HeroBlog - a GatsbyJS starter", // <title>
-  shortSiteTitle: "HeroBlog - GatsbyJS starter", // <title> ending for posts and pages
-  siteDescription: "HeroBlog is a GatsbyJS starter.",
-  siteUrl: "https://gatsby-starter-hero-blog.greglobinski.com",
+  siteTitle: "Women Coders", // <title>
+  shortSiteTitle: "Women Coders", // <title> ending for posts and pages
+  siteDescription: "Women Coders, empowering women in tech!!",
+  siteUrl: "https://www.women-coders.org/",
   // pathPrefix: "",
   siteImage: "preview.jpg",
   siteLanguage: "en",
 
   /* author */
-  authorName: "greg lobinski",
-  authorTwitterAccount: "greglobinski",
+  authorName: "Arwa Lokhandwala",
+  authorTwitterAccount: "arwa18793",
 
   /* info */
   headerTitle: "Women Coders",
   headerSubTitle: "Empowering women in tech",
 
   /* manifest.json */
-  manifestName: "HeroBlog - a GatsbyJS starter",
-  manifestShortName: "HeroBlog", // max 12 characters
+  manifestName: "Women Coders",
+  manifestShortName: "WomenCoders", // max 12 characters
   manifestStartUrl: "/index.html",
   manifestBackgroundColor: "white",
   manifestThemeColor: "#666",

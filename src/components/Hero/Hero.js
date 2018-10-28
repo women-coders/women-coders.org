@@ -1,10 +1,11 @@
 import React from "react";
 import PropTypes from "prop-types";
+import { Link } from "gatsby";
 
-import { FaArrowDown } from "react-icons/fa/";
+import { FaArrowRight } from "react-icons/fa/";
 
 const Hero = props => {
-  const { scrollToContent, backgrounds, theme } = props;
+  const { backgrounds, theme } = props;
 
   return (
     <React.Fragment>
@@ -12,12 +13,13 @@ const Hero = props => {
         <h1>
           Women Coders <br/>
           <br/>
-          Wanna know us more ??
+          Launching soon in December
         </h1>
-        
-        <button onClick={scrollToContent} aria-label="scroll">
-          <FaArrowDown />
-        </button>
+        <Link to="/about">
+          <button aria-label="scroll">
+            <FaArrowRight />
+          </button>
+        </Link>
       </section>
 
       {/* --- STYLES --- */}
@@ -91,13 +93,13 @@ const Hero = props => {
 
         @keyframes buttonIconMove {
           0% {
-            transform: translateY(0);
+            transform: translateX(0);
           }
           50% {
-            transform: translateY(-10px);
+            transform: translateX(-10px);
           }
           100% {
-            transform: translateY(0);
+            transform: translateX(0);
           }
         }
 
