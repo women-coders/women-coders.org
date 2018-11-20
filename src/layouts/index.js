@@ -14,7 +14,6 @@ export const ThemeContext = React.createContext(null);
 export const ScreenWidthContext = React.createContext(0);
 export const FontLoadedContext = React.createContext(false);
 
-
 class Layout extends React.Component {
   constructor() {
     super();
@@ -45,7 +44,12 @@ class Layout extends React.Component {
   }
 
   resizeThrottler = () => {
-    return timeoutThrottlerHandler(this.timeouts, "resize", 100, this.resizeHandler);
+    return timeoutThrottlerHandler(
+      this.timeouts,
+      "resize",
+      100,
+      this.resizeHandler
+    );
   };
 
   resizeHandler = () => {
@@ -76,7 +80,7 @@ class Layout extends React.Component {
     );
   };
 
-/* eslint-disable */
+  /* eslint-disable */
   render() {
     return (
       <StaticQuery
