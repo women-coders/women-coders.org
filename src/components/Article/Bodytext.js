@@ -31,7 +31,7 @@ const Bodytext = props => {
           :global(p) {
             font-size: ${theme.font.size.s};
             line-height: ${theme.font.lineHeight.xxl};
-            margin: 0 0 1.5em;
+            margin: 1.5em 0 1.5em;
           }
           :global(ul) {
             list-style: circle;
@@ -53,7 +53,7 @@ const Bodytext = props => {
             margin: 2.5em 0;
             border-radius: ${theme.size.radius.default};
             overflow: hidden;
-            border: 1px solid ${theme.line.color};
+            // border: 1px solid ${theme.line.color};
           }
           :global(code.language-text) {
             background: ${theme.color.neutral.gray.c};
