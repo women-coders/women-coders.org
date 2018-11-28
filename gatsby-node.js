@@ -45,6 +45,7 @@ exports.createPages = ({ graphql, actions }) => {
     const categoryTemplate = path.resolve(
       "./src/templates/CategoryTemplate.js"
     );
+    const agendaTemplate = path.resolve("./src/templates/AgendaTemplate.js");
     resolve(
       graphql(
         `
@@ -126,41 +127,31 @@ exports.createPages = ({ graphql, actions }) => {
         //   });
         // });
 
-        // Create posts
-        const posts = items.filter(item => item.node.fields.source === "posts");
-        posts.forEach(({ node }, index) => {
-          const slug = node.fields.slug;
-          const next = index === 0 ? undefined : posts[index - 1].node;
-          const prev =
-            index === posts.length - 1 ? undefined : posts[index + 1].node;
-          const source = node.fields.source;
-
-          createPage({
-            path: slug,
-            component: postTemplate,
-            context: {
-              slug,
-              prev,
-              next,
-              source
-            }
-          });
-        });
-
         // and pages.
         const pages = items.filter(item => item.node.fields.source === "pages");
+        //console.log("And the pages to create are", pages[0]);
         pages.forEach(({ node }) => {
           const slug = node.fields.slug;
           const source = node.fields.source;
-
-          createPage({
-            path: slug,
-            component: pageTemplate,
-            context: {
-              slug,
-              source
-            }
-          });
+          if (slug === "/team/") {
+            createPage({
+              path: slug,
+              component: agendaTemplate,
+              context: {
+                slug,
+                source
+              }
+            });
+          } else {
+            createPage({
+              path: slug,
+              component: pageTemplate,
+              context: {
+                slug,
+                source
+              }
+            });
+          }
         });
       })
     );
