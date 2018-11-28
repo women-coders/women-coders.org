@@ -80,30 +80,51 @@ exports.createPages = ({ graphql, actions }) => {
         const items = result.data.allMarkdownRemark.edges;
 
         // Create category list
-        const categorySet = new Set();
-        items.forEach(edge => {
-          const {
-            node: {
-              frontmatter: { category }
-            }
-          } = edge;
+        // const categorySet = new Set();
+        // items.forEach(edge => {
+        //   const {
+        //     node: {
+        //       frontmatter: { category }
+        //     }
+        //   } = edge;
 
-          if (category && category !== null) {
-            categorySet.add(category);
-          }
-        });
+        //   if (category && category !== null) {
+        //     categorySet.add(category);
+        //   }
+        // });
 
-        // Create category pages
-        const categoryList = Array.from(categorySet);
-        categoryList.forEach(category => {
-          createPage({
-            path: `/category/${_.kebabCase(category)}/`,
-            component: categoryTemplate,
-            context: {
-              category
-            }
-          });
-        });
+        // // Create category pages
+        // const categoryList = Array.from(categorySet);
+        // categoryList.forEach(category => {
+        //   createPage({
+        //     path: `/category/${_.kebabCase(category)}/`,
+        //     component: categoryTemplate,
+        //     context: {
+        //       category
+        //     }
+        //   });
+        // });
+
+        // // Create posts
+        // const posts = items.filter(item => item.node.fields.source === "posts");
+        // posts.forEach(({ node }, index) => {
+        //   const slug = node.fields.slug;
+        //   const next = index === 0 ? undefined : posts[index - 1].node;
+        //   const prev =
+        //     index === posts.length - 1 ? undefined : posts[index + 1].node;
+        //   const source = node.fields.source;
+
+        //   createPage({
+        //     path: slug,
+        //     component: postTemplate,
+        //     context: {
+        //       slug,
+        //       prev,
+        //       next,
+        //       source
+        //     }
+        //   });
+        // });
 
         // Create posts
         const posts = items.filter(item => item.node.fields.source === "posts");
