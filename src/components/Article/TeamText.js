@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-const Bodytext = props => {
+const TeamText = props => {
   const { html, theme } = props;
 
   return (
@@ -12,7 +12,9 @@ const Bodytext = props => {
         .bodytext {
           animation-name: bodytextEntry;
           animation-duration: ${theme.time.duration.long};
-
+          text-align:center;
+          margin:auto;
+          padding: ${theme.space.inset.default};
           :global(h2),
           :global(h3) {
             margin: 1.5em 0 1em;
@@ -34,20 +36,35 @@ const Bodytext = props => {
             margin: 1.5em 0 1.5em;
           }
           :global(ul) {
-            list-style: circle;
-            margin: 0 0 1.5em;
-            padding: 0 0 0 1.5em;
+            // list-style: circle;
+            // margin: 0 0 1.5em;
           }
+         
           :global(li) {
-            margin: 0.7em 0;
+            // margin: 0.7em 0;
             line-height: 1.5;
+            width:${theme.text.maxWidth.mobile};
+            
+            display:inline-block;
+            list-style-type: none;
+            // padding:10px 30px;
+            text-align:center;
+            // height:600px;
+            vertical-align:top;
+            
+            margin:10px;
+          }
+          
+          :global(li img){
+            width:200px;
+            height:200px;
           }
           :global(a) {
             font-weight: ${theme.font.weight.bold};
             color: ${theme.color.brand.primary};
             text-decoration: underline;
           }
-          :global(a.gatsby-resp-image-link) {
+          :global(gatsby-resp-image-link) {
             border: 0;
             display: block;
             margin: 2.5em 0;
@@ -62,6 +79,9 @@ const Bodytext = props => {
             padding: 0.1em 0.3em 0.2em;
             border-radius: 0.1em;
           }
+          ::after{
+              clear:both;
+          }
         }
 
         @keyframes bodytextEntry {
@@ -72,14 +92,32 @@ const Bodytext = props => {
             opacity: 1;
           }
         }
+        @from-width desktop {
+            .bodytext {
+              padding: ${`calc(${theme.space.default}) calc(${
+                theme.space.default
+              } * 2)`};
+            //   max-width: ${theme.text.maxWidth.tablet};
+            :global(li){
+                width:${theme.text.maxWidth.desktop};
+            }
+            
+            }
+            
+          }
+          
+          
+          
+        
+          
       `}</style>
     </React.Fragment>
   );
 };
 
-Bodytext.propTypes = {
+TeamText.propTypes = {
   html: PropTypes.string.isRequired,
   theme: PropTypes.object.isRequired
 };
 
-export default Bodytext;
+export default TeamText;
